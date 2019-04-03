@@ -1,0 +1,47 @@
+﻿<html>
+    <head>
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="~/Scripts/js/script.js"></script>
+        <link rel="stylesheet" href="~/css/style.css" />
+    </head>
+    <body>
+        <div class="container-fluid">
+            <table class="table-striped">
+                <thead>
+                    <tr>
+                        <th class="col-md-4 text-center">Название</th>
+                        <th class="col-md-3 text-center">Размер</th>
+                        <th class="col-md-4 text-center">Дата последней модификации</th>
+                        <th class="col-md-3 text-center">Прочитать файл</th>
+                        <th class="col-md-3 text-center">Удалить файл</th>
+                    </tr>
+                </thead>
+                <tbody id="tablebody"></tbody>
+            </table>
+            <form id="form1" action="/Home/AddFile" method="post">
+                <input id="fileInput" class="sendFile" name="file" type="file" />
+                <input type="submit" class="sendFile" value="Отправить" />
+            </form>
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <img id="picture" src="" alt="">
+                            <p id="text"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
